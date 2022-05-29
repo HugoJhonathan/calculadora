@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(wall.jpg);
+    background-image: url(img/wall.jpg);
     background-color: #949494;
     background-position: center;
     background-size: auto 100%;
@@ -187,7 +187,7 @@ body {
 
 #calculadora .buttons tr td button[value="apagar"] {
     border-color:#c7162b;
-    background: url('apagar.png') no-repeat #c7162b center;
+    background: url('img/apagar.png') no-repeat #c7162b center;
     color: #fff;
 }
 
@@ -234,7 +234,7 @@ body {
     font-size: 15px;
     font-weight: bold;
     background: center center no-repeat #dadada;
-    background-image: url('img1.png')
+    background-image: url('img/img1.png')
 }
 
 #head .action-buttons {
@@ -246,13 +246,13 @@ body {
 
 #head .action-buttons button:first-child {
     font-size: 13px;
-    background-image: url('img3.png')
+    background-image: url('img/img3.png')
     
 }
 
 #head .action-buttons button:last-child {
     font-size: 9px;
-    background-image: url('img2.png')
+    background-image: url('img/img2.png')
 }
 
 #limparHistorico {
