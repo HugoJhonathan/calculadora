@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -32,15 +36,11 @@ body {
 #calculadora {
     max-width: 400px;
     width: 400px;
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     background-color: #fff;
-
     border-radius: 10px;
-    /* opacity: .95; */
-
-    /* opacity: .8; */
+    opacity: .85;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
     background-color: #fafafa;
 }
@@ -104,7 +104,6 @@ body {
 
 #calculadora #display {
     width: 100%;
-
     padding: 10px;
     border: none;
     outline: none;
@@ -116,7 +115,10 @@ body {
     -webkit-user-select: none;
     user-select: none;
     background-color: #fff;
-    
+}
+
+#calculadora #display:disabled {
+    color: #000;
 }
 
 #calculadora .alerts {
@@ -136,7 +138,7 @@ body {
     padding: 10px;
     -webkit-user-select: none;
     user-select: none;
-   
+
 }
 
 #calculadora .buttons tr {
@@ -158,17 +160,19 @@ body {
     color: #222;
     font-size: 16px;
     transition: .1s;
-  
+
 }
 
 
-#calculadora .buttons tr td button:hover{
+#calculadora .buttons tr td button:hover {
     background-color: #f5f5f5;
 }
+
 #calculadora .buttons tr td button:active {
     background-color: #d6d6d6;
 }
-.box-limpar-historico{
+
+.box-limpar-historico {
     background-color: #f1f1f1;
 }
 
@@ -180,14 +184,14 @@ body {
 
 #calculadora .buttons tr td button[value="="] {
     background-color: #12ad2a;
-    border-color:#12ad2a;
+    border-color: #12ad2a;
     color: #fff;
     height: 84px;
 }
 
-#calculadora .buttons tr td button[value="apagar"] {
-    border-color:#c7162b;
-    background: url('img/apagar.png') no-repeat #c7162b center;
+#calculadora .buttons tr td button[value="clear"] {
+    border-color: #c7162b;
+    background: no-repeat #c7162b center;
     color: #fff;
 }
 
@@ -214,12 +218,14 @@ body {
     transition: .1s;
 }
 
-#head .desfazer button:hover{
+#head .desfazer button:hover {
     background-color: #f5f5f5;
 }
-#head .desfazer button:active{
-    background-color:#d6d6d6;
+
+#head .desfazer button:active {
+    background-color: #d6d6d6;
 }
+
 #head .type-calc span {
     font-weight: bold;
     font-size: 14px;
@@ -247,7 +253,6 @@ body {
 #head .action-buttons button:first-child {
     font-size: 13px;
     background-image: url('img/img3.png')
-    
 }
 
 #head .action-buttons button:last-child {

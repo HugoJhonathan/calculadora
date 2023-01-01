@@ -8,14 +8,14 @@
     <title>Linux Calculadora</title>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </head>
 
 <body>
     <div id="calculadora">
 
         <div id="head">
-            <div class="desfazer"><button value="desfazer">Desfazer</button></div>
+            <div class="desfazer"><button value="undo">Desfazer</button></div>
             <div class="type-calc"><span>Básico</span></div>
             <div class="action-buttons">
                 <button></button>
@@ -30,27 +30,26 @@
         </div>
 
         <div class="box-limpar-historico flex-x-center-y-center" style="height: 30px;">
-            <div id="limparHistorico" onclick="limparHistorico()" class="hide">Limpar histórico</div>
+            <div id="limparHistorico" class="hide">Limpar histórico</div>
         </div>
-
 
         <label for="display">
             <form>
-                <input type="text" name="display" id="display" autocomplete='off' autofocus>
+                <input type="text" name="display" id="display" disabled autocomplete='off'>
             </form>
             <div class="alerts"></div>
         </label>
 
-
-
         <table class="buttons">
             <tr>
-                <td><button value="apagar"></button>
+                <td><button value="clear">
+                        <img src="./img/apagar.png" alt="">
+                    </button>
                 </td>
                 <td><button value="(">(</button></td>
                 <td><button value=")">)</button></td>
                 <td><button value="mod">mod</button></td>
-                <td><button value="(π)">π</button></td>
+                <td><button value="π">π</button></td>
             </tr>
             <tr>
                 <td><button value="7" class="number">7</button></td>
